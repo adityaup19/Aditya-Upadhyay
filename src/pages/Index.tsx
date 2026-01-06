@@ -65,21 +65,21 @@ const Index = () => {
             description="Verified student contributions to real software products."
             proof="35 users • active contributors"
             status="live"
-            href="https://devproof.app"
+            href="https://www.devproof.tech/"
             buttonText="View DevProof"
           />
           <ProjectCard
             title="VisaRisk"
             description="Visa risk simulation using public cases and documented patterns."
             status="live"
-            href="https://visarisk.app"
+            href="https://www.devproof.tech/"
             buttonText="View VisaRisk"
           />
           <ProjectCard
             title="Mirror"
             description="A choice-based pattern engine that reveals behavioral trends over time."
             status="beta"
-            href="https://mirror.app"
+            href="https://mirror-umber-one.vercel.app/"
             buttonText="View Mirror"
           />
         </div>
