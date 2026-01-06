@@ -72,7 +72,7 @@ const Index = () => {
             title="VisaRisk"
             description="Visa risk simulation using public cases and documented patterns."
             status="live"
-            href="https://www.devproof.tech/"
+            href="https://visarisk.vercel.app/"
             buttonText="View VisaRisk"
           />
           <ProjectCard
