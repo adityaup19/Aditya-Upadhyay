@@ -50,7 +50,7 @@ const Index = () => {
           <SocialLink href="https://linkedin.com/in/upadhyayaditya">
             LinkedIn
           </SocialLink>
-          <SocialLink href="https://twitter.com/itsoasispace">
+          <SocialLink href="https://x.com/adityau199">
             Twitter
           </SocialLink>
         </div>

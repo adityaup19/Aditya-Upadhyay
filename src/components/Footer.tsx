@@ -28,7 +28,7 @@ export const Footer = () => {
       <div className="flex gap-5">
         <FooterLink href="mailto:upadhyayaditya19@gmail.com">Email</FooterLink>
         <FooterLink href="https://linkedin.com/in/upadhyayaditya">LinkedIn</FooterLink>
-        <FooterLink href="https://twitter.com/itsoasispace">Twitter</FooterLink>
+        <FooterLink href="https://x.com/adityau199">Twitter</FooterLink>
       </div>
     </footer>
   );
