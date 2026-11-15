@@ -10,7 +10,7 @@ const Work = () => {
   return (
     <div className="px-5 pb-10 md:px-[72px]">
       <div className="-mx-5 md:-mx-[72px]">
-        <PageTitle title="Selected Work" lede={site.workLede} />
+        <PageTitle title="Selected Work" />
       </div>
       <WorkGrid projects={site.projects} compact />
     </div>

@@ -24,13 +24,15 @@ export function Body({ children, className }: { children: ReactNode; className?:
   );
 }
 
-export function PageTitle({ title, lede }: { title: string; lede: string }) {
+export function PageTitle({ title, lede }: { title: string; lede?: string }) {
   return (
     <header className="px-5 pb-14 pt-32 md:px-[72px] md:pb-20 md:pt-44">
       <h1 className="display text-[clamp(3.4rem,10.2vw,9.4rem)] text-white">{title}</h1>
-      <p className="mx-auto mt-8 max-w-[28rem] text-center text-[19px] leading-[1.35] tracking-[-0.01em] text-white/80 md:text-[21px]">
-        {lede}
-      </p>
+      {lede ? (
+        <p className="mx-auto mt-8 max-w-[28rem] text-center text-[19px] leading-[1.35] tracking-[-0.01em] text-white/80 md:text-[21px]">
+          {lede}
+        </p>
+      ) : null}
     </header>
   );
 }

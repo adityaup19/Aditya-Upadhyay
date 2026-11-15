@@ -31,14 +31,13 @@ export const site = {
   phone: "",
   cv: "",
   hero:
-    "I founded Oasis Orbital and built Call a Satellite, a live voice conversation with spacecraft powered by real orbital data.",
+    "I'm an Economics graduate with experience in finance and technology. I founded Oasis Orbital and built Call a Satellite, a live voice conversation with spacecraft powered by real orbital data.",
   statement:
     "Call a Satellite lets anyone talk to the International Space Station and other spacecraft. The answers come from live orbital data, not a script. It started in a Stony Brook classroom and now runs on a science museum floor.",
   disciplines: ["Product", "Voice", "Orbit"],
   ticker: ["Oasis Orbital", "Call a Satellite", "Visa Risk", "MarketMind", "SHU"],
   words: ["Finance", "Software"],
   workNote: "Showcasing work from the last few years ©2024—2026",
-  workLede: "Call a Satellite, and the other products built around it.",
   aboutLede: "Founder of Oasis Orbital. Builder of Call a Satellite.",
   about: [
     "I founded Oasis Orbital to make satellites feel as close as a phone call. Call a Satellite is a live voice system: ask the International Space Station where it is, how fast it is moving, or what it sees below, and the answer changes with the orbit.",
@@ -150,13 +149,13 @@ export const site = {
     {
       slug: "devproof",
       title: "DevProof",
-      tagline: "Verified student contributions to real software products.",
+      tagline: "Verified student contributions to real software products. Discontinued after one year.",
       overview: [
-        "DevProof is a way to verify that a student actually contributed to a real software product. The product is live, with a small group of people already using it.",
-        "The work is the product itself: a narrow SaaS, built to do one job clearly, and kept in public while it grows.",
+        "DevProof verified that a student had contributed to a real software product. A small group of people used it.",
+        "It was a narrow SaaS, built to do one job clearly. It lasted one year and is now discontinued.",
       ],
-      tags: ["SaaS", "Product"],
-      year: "2026",
+      tags: ["Discontinued", "SaaS"],
+      year: "1 year",
       href: "https://www.devproof.tech/",
       mark: "DP",
       gradient: "linear-gradient(155deg, #0d1c16 0%, #1b4a36 48%, #cbb892 130%)",
