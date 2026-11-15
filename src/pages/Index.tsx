@@ -79,7 +79,11 @@ const Index = () => {
         <div className="grid gap-14 md:grid-cols-[1.45fr_0.7fr_0.7fr] md:gap-16">
           <div>
             <Label>About me</Label>
-            <Body className="mt-5 max-w-[34rem]">{site.about[0]}</Body>
+            <div className="mt-5 max-w-[34rem] space-y-6">
+              {site.about.map((paragraph) => (
+                <Body key={paragraph}>{paragraph}</Body>
+              ))}
+            </div>
             <div className="mt-8 aspect-[4/5] max-w-[525px] overflow-hidden">
               <div className="relative h-full w-full" style={{ background: site.projects[0].gradient }}>
                 <p className="display absolute bottom-0 left-4 text-[28vw] leading-none text-white/20 md:text-[11rem]">AU</p>

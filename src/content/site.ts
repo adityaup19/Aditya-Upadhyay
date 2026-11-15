@@ -40,8 +40,9 @@ export const site = {
   workNote: "Showcasing work from the last few years ©2024—2026",
   aboutLede: "Founder of Oasis Orbital. Builder of Call a Satellite.",
   about: [
-    "I founded Oasis Orbital to make satellites feel as close as a phone call. Call a Satellite is a live voice system: ask the International Space Station where it is, how fast it is moving, or what it sees below, and the answer changes with the orbit.",
-    "I studied quantitative economics and theater at Stony Brook University, class of 2025. The product debuted in a classroom there, then became an exhibit at Sacred Heart University’s Discovery Science Center and Planetarium, where visitors asked more than 900 questions.",
+    "I'm a Stony Brook University graduate (Class of 2025), where I studied Quantitative Economics and Theatre. My background spans finance, technology, and building things that bring ideas to life.",
+    "I founded Oasis Orbital and created Call a Satellite, a platform that lets people have real-time voice conversations with spacecraft using live orbital data. What started as an idea grew into a classroom demonstration at Stony Brook and later an interactive exhibit at Sacred Heart University’s Discovery Science Center and Planetarium, where visitors interacted with it over 900 times.",
+    "I'm interested in the intersection of technology, business, and space, and I'm always looking for opportunities to learn, build, and collaborate.",
   ],
   services: ["Voice interfaces", "Live orbital data", "Museum exhibits", "Education"],
   industries: ["Space", "Museums", "Education", "Science"],
