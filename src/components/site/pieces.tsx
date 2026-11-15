@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { site, type PressItem, type Project } from "@/content/site";
 import { cn } from "@/lib/utils";
@@ -165,10 +165,29 @@ export function Marquee({
   className?: string;
   duration?: string;
 }) {
-  const loop = [...items, ...items, ...items];
+  const trackRef = useRef<HTMLDivElement>(null);
+  const loop = [...items, ...items];
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    const seconds = Number.parseFloat(duration) || 32;
+    let frame = 0;
+    const tick = (now: number) => {
+      const width = track.scrollWidth / 2;
+      if (width > 0) {
+        const distance = (((now / 1000) % seconds) / seconds) * width;
+        track.style.transform = `translate3d(${-distance}px, 0, 0)`;
+      }
+      frame = requestAnimationFrame(tick);
+    };
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [duration, items]);
+
   return (
     <div className="overflow-hidden">
-      <div className="flex w-max animate-marquee" style={{ animationDuration: duration }}>
+      <div ref={trackRef} className="flex w-max">
         {loop.map((item, index) => (
           <span key={`${item}-${index}`} className={className}>
             {item}

@@ -168,7 +168,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee,
   .swap > span {
     animation: none !important;
     transition: none !important;
