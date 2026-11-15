@@ -1,113 +1,117 @@
-import { useEffect, useState } from "react";
-import { Avatar } from "@/components/Avatar";
-import { SocialLink } from "@/components/SocialLink";
-import { ProjectCard } from "@/components/ProjectCard";
-import { NowBuildingCard } from "@/components/NowBuildingCard";
-import { SectionTitle } from "@/components/SectionTitle";
-import { Footer } from "@/components/Footer";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { site } from "@/content/site";
+import { Body, Label, Marquee, PressList, WorkGrid } from "@/components/site/pieces";
 
 const Index = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
-    // Trigger fade-in animation after mount
-    const timer = setTimeout(() => setIsVisible(true), 50);
-    return () => clearTimeout(timer);
+    document.title = "Aditya Upadhyay";
   }, []);
 
   return (
-    <main
-      className={`max-w-[760px] mx-auto px-5 py-12 sm:px-8 sm:py-24 transition-all duration-500 ease-out ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
-      }`}
-    >
-      {/* Header */}
-      <header className="mb-14 sm:mb-16 pb-12 sm:pb-14 border-b border-border">
-        <div className="flex items-center gap-4 mb-7">
-          <Avatar />
-          <div className="flex flex-col">
-            <h1 className="text-xl font-semibold tracking-tight text-foreground leading-tight">
-              Aditya Upadhyay
-            </h1>
-            <span className="text-[0.8125rem] text-text-muted uppercase tracking-widest font-medium">
-              Builder
-            </span>
-          </div>
-        </div>
+    <div>
+      <section className="px-5 pb-6 pt-32 md:px-[72px] md:pb-10 md:pt-44">
+        <h1 className="display text-[clamp(3.2rem,9vw,8.2rem)] text-white">{site.name}</h1>
+      </section>
 
-        <h2 className="text-[clamp(2rem,5vw,2.75rem)] font-semibold leading-[1.2] mb-4 mt-2 tracking-tight text-foreground">
-          I build web-based software products.
-        </h2>
-
-        <p className="text-lg text-text-secondary max-w-[480px] mb-8">
-          SaaS platforms, AI-driven tools, and experimental systems.
+      <section className="px-5 pb-24 pt-16 md:px-[72px] md:pb-36 md:pt-24">
+        <p className="mx-auto max-w-[38rem] text-center text-[19px] leading-[1.35] tracking-[-0.01em] text-white/80 md:text-[21px]">
+          {site.hero}
         </p>
+      </section>
 
-        <div className="flex flex-wrap items-center gap-6">
-          <SocialLink href="mailto:upadhyayaditya19@gmail.com" isEmail>
-            upadhyayaditya19@gmail.com
-          </SocialLink>
-          <SocialLink href="https://linkedin.com/in/upadhyayaditya">
-            LinkedIn
-          </SocialLink>
-          <SocialLink href="https://x.com/adityau199">
-            Twitter
-          </SocialLink>
-        </div>
-      </header>
+      <section className="px-5 pb-20 md:px-[120px] md:pb-28">
+        <p className="text-center text-[clamp(1.7rem,3.5vw,3.15rem)] font-medium leading-[1.08] tracking-[-0.036em] text-white">
+          {site.statement}
+        </p>
+        <ul className="mt-16 flex flex-wrap items-center justify-center gap-x-16 gap-y-4 md:mt-20 md:gap-x-28">
+          {site.disciplines.map((item) => (
+            <li key={item} className="text-[19px] tracking-[-0.01em] text-white/80 md:text-[21px]">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </section>
 
-      {/* Projects Section */}
-      <section>
-        <SectionTitle>Projects</SectionTitle>
-        <div className="flex flex-col gap-5 mb-8">
-          <ProjectCard
-            title="DevProof"
-            description="Verified student contributions to real software products."
-            proof="35 users • active contributors"
-            status="live"
-            href="https://www.devproof.tech/"
-            buttonText="View DevProof"
-          />
-          <ProjectCard
-            title="VisaRisk"
-            description="Visa risk simulation using public cases and documented patterns."
-            status="live"
-            href="https://visarisk.vercel.app/"
-            buttonText="View VisaRisk"
-          />
-          <ProjectCard
-            title="Mirror"
-            description="A choice-based pattern engine that reveals behavioral trends over time."
-            status="beta"
-            href="https://mirror-umber-one.vercel.app/"
-            buttonText="View Mirror"
-          />
-        </div>
-
-        {/* Now Building */}
-        <NowBuildingCard
-          title="AI Automation Agent"
-          description="Private until it's reliable."
-          status="stealth"
+      <section className="py-10 md:py-16">
+        <Marquee
+          items={site.ticker}
+          duration="28s"
+          className="px-8 text-[clamp(2.4rem,5.5vw,4.9rem)] font-medium uppercase leading-none tracking-[-0.03em] text-white md:px-12"
         />
       </section>
 
-      {/* About Section */}
-      <section className="my-20">
-        <SectionTitle>About</SectionTitle>
-        <p className="text-text-secondary text-base leading-relaxed max-w-[600px]">
-          I build software that solves{" "}
-          <strong className="text-foreground font-medium">
-            narrow problems well
-          </strong>
-          . No pitches, no vision decks — just working products. Everything here
-          is live or in active development.
+      <section className="px-5 pb-8 pt-16 md:px-[72px] md:pt-24">
+        <div className="mb-10 flex flex-col gap-6 md:mb-12 md:flex-row md:items-end md:justify-between">
+          <div>
+            <Label>Work</Label>
+            <h2 className="display mt-3 text-[clamp(2.6rem,5vw,4.4rem)] text-white">Selected Work</h2>
+          </div>
+          <Link to="/work" className="mono text-[13px] text-[#888] transition-colors hover:text-white md:text-[14px]">
+            View all works
+          </Link>
+        </div>
+        <WorkGrid projects={site.projects} compact />
+      </section>
+
+      <section className="px-5 pb-8 pt-16 md:px-[72px] md:pt-24">
+        <div className="mb-10 flex flex-col gap-6 md:mb-12 md:flex-row md:items-end md:justify-between">
+          <div>
+            <Label>Mentions</Label>
+            <h2 className="display mt-3 text-[clamp(2.6rem,5vw,4.4rem)] text-white">Press</h2>
+          </div>
+          <Link to="/press" className="mono text-[13px] text-[#888] transition-colors hover:text-white md:text-[14px]">
+            All press
+          </Link>
+        </div>
+        <PressList items={site.press} />
+      </section>
+
+      <section className="px-5 py-16 md:px-[72px] md:py-24">
+        <p className="display flex items-baseline justify-between gap-[0.2em] whitespace-nowrap text-[clamp(2.4rem,11.2vw,12rem)] leading-[0.85] tracking-[-0.05em] text-white">
+          {site.words.map((word) => (
+            <span key={word}>{word}</span>
+          ))}
         </p>
       </section>
 
-      {/* Footer */}
-      <Footer />
-    </main>
+      <section className="px-5 pb-8 md:px-[72px]">
+        <div className="grid gap-14 md:grid-cols-[1.45fr_0.7fr_0.7fr] md:gap-16">
+          <div>
+            <Label>About me</Label>
+            <Body className="mt-5 max-w-[34rem]">{site.about[0]}</Body>
+            <div className="mt-8 aspect-[4/5] max-w-[525px] overflow-hidden">
+              <div className="relative h-full w-full" style={{ background: site.projects[0].gradient }}>
+                <p className="display absolute bottom-0 left-4 text-[28vw] leading-none text-white/20 md:text-[11rem]">AU</p>
+              </div>
+            </div>
+            <Link to="/about" className="mono mt-8 inline-block text-[13px] text-[#888] transition-colors hover:text-white md:text-[14px]">
+              Read bio →
+            </Link>
+          </div>
+          <div>
+            <Label>Services</Label>
+            <ul className="mt-5 space-y-1">
+              {site.services.map((item) => (
+                <li key={item} className="text-[19px] tracking-[-0.01em] text-white/80 md:text-[21px]">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <Label>Industries</Label>
+            <ul className="mt-5 space-y-1">
+              {site.industries.map((item) => (
+                <li key={item} className="text-[19px] tracking-[-0.01em] text-white/80 md:text-[21px]">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
