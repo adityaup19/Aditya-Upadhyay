@@ -34,8 +34,8 @@ export const site = {
     "I'm an Economics graduate with experience in finance and technology. I founded Oasis Orbital and built Call a Satellite, a live voice conversation with spacecraft powered by real orbital data.",
   statement:
     "Call a Satellite lets anyone talk to the International Space Station and other spacecraft. The answers come from live orbital data, not a script. It started in a Stony Brook classroom and now runs on a science museum floor.",
-  disciplines: ["Product", "Voice", "Orbit"],
-  ticker: ["Oasis Orbital", "Call a Satellite", "Visa Risk", "MarketMind", "SHU"],
+  disciplines: ["Product", "Software", "Finance"],
+  ticker: ["Oasis Orbital", "Call a Satellite", "Visa Risk", "MarketMind", "DevProof"],
   words: ["Finance", "Software"],
   workNote: "Showcasing work from the last few years ©2024—2026",
   aboutLede: "Founder of Oasis Orbital. Builder of Call a Satellite.",

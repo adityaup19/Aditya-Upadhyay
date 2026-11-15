@@ -10,23 +10,20 @@ const Index = () => {
 
   return (
     <div>
-      <section className="px-5 pb-6 pt-32 md:px-[72px] md:pb-10 md:pt-44">
-        <h1 className="display text-[clamp(3.2rem,9vw,8.2rem)] text-white">{site.name}</h1>
-      </section>
-
-      <section className="px-5 pb-24 pt-16 md:px-[72px] md:pb-36 md:pt-24">
-        <p className="mx-auto max-w-[38rem] text-center text-[19px] leading-[1.35] tracking-[-0.01em] text-white/80 md:text-[21px]">
+      <section className="px-5 pb-12 pt-32 md:px-[72px] md:pb-16 md:pt-40">
+        <h1 className="display text-[clamp(3.2rem,8vw,7.4rem)] text-white">{site.name}</h1>
+        <p className="mt-10 max-w-[44rem] text-[clamp(1.25rem,2.1vw,1.7rem)] font-medium leading-[1.3] tracking-[-0.025em] text-white/85 md:mt-14">
           {site.hero}
         </p>
       </section>
 
-      <section className="px-5 pb-20 md:px-[120px] md:pb-28">
-        <p className="text-center text-[clamp(1.7rem,3.5vw,3.15rem)] font-medium leading-[1.08] tracking-[-0.036em] text-white">
+      <section className="px-5 pb-14 md:px-[72px] md:pb-20">
+        <p className="max-w-[40rem] text-[18px] leading-[1.45] tracking-[-0.01em] text-white/60 md:text-[20px]">
           {site.statement}
         </p>
-        <ul className="mt-16 flex flex-wrap items-center justify-center gap-x-16 gap-y-4 md:mt-20 md:gap-x-28">
+        <ul className="mt-8 flex flex-wrap gap-x-10 gap-y-3">
           {site.disciplines.map((item) => (
-            <li key={item} className="text-[19px] tracking-[-0.01em] text-white/80 md:text-[21px]">
+            <li key={item} className="mono text-[13px] text-white/70 md:text-[14px]">
               {item}
             </li>
           ))}
@@ -58,13 +55,13 @@ const Index = () => {
         <div className="mb-10 flex flex-col gap-6 md:mb-12 md:flex-row md:items-end md:justify-between">
           <div>
             <Label>Mentions</Label>
-            <h2 className="display mt-3 text-[clamp(2.6rem,5vw,4.4rem)] text-white">Press</h2>
+            <h2 className="display mt-3 text-[clamp(2rem,3.2vw,3rem)] text-white">Press</h2>
           </div>
           <Link to="/press" className="mono text-[13px] text-[#888] transition-colors hover:text-white md:text-[14px]">
             All press
           </Link>
         </div>
-        <PressList items={site.press} />
+        <PressList items={site.press.slice(0, 4)} />
       </section>
 
       <section className="px-5 py-16 md:px-[72px] md:py-24">
@@ -78,7 +75,8 @@ const Index = () => {
       <section className="px-5 pb-8 md:px-[72px]">
         <div className="grid gap-14 md:grid-cols-[1.45fr_0.7fr_0.7fr] md:gap-16">
           <div>
-            <Label>About me</Label>
+            <Label>About</Label>
+            <h2 className="display mt-3 text-[clamp(2rem,3.2vw,3rem)] text-white">About me</h2>
             <div className="mt-5 max-w-[34rem] space-y-6">
               {site.about.map((paragraph) => (
                 <Body key={paragraph}>{paragraph}</Body>
